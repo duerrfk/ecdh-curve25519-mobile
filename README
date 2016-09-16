@@ -1,8 +1,8 @@
 # What is ECDH-Curve25519-Mobile?
 
-ECDH-Curve25519-Mobile implements Diffie-Hellman key exchange based on the Elliptic Curve 25519 for mobile devices using the Android platform. 
+ECDH-Curve25519-Mobile implements Diffie-Hellman key exchange based on the Elliptic Curve 25519 for Android devices.
 
-ECDH-Curve25519-Mobile is based on the NaCl crypto implementation, more specifically [AVRNaCl](http://munacl.cryptojedi.org/atmega.shtml), written by Michael Hutter and Peter Schwabe, who dedicated their implementation to the public domain. ECDH-Curve25519-Mobile follows their example and also dedicates the code to the public domain using CC0 (cf. file COPYING.txt). Actually, the core of ECDH-Curve25519-Mobile is NaCl code, and ECDH-Curve25519-Mobile is just a simple JNI (Java Native Interface) wrapper around it to make it accessible from Java on Android devices. So we gratefully acknowledge the work of the NaCl team and their generous dedication of their code to the public domain!
+ECDH-Curve25519-Mobile is based on the NaCl crypto implementation, more specifically [AVRNaCl](http://munacl.cryptojedi.org/atmega.shtml), written by Michael Hutter and Peter Schwabe, who dedicated their implementation to the public domain. ECDH-Curve25519-Mobile follows their example and also dedicates the code to the public domain using The Unlicense (cf. file COPYING). Actually, the core of ECDH-Curve25519-Mobile is NaCl code, and ECDH-Curve25519-Mobile is just a simple JNI (Java Native Interface) wrapper around it to make it accessible from Java on Android devices. So we gratefully acknowledge the work of the NaCl team and their generous dedication of their code to the public domain!
 
 ECDH-Curve25519-Mobile is a native Android library since NaCl is implemented in C rather than Java. However, it can be easily compiled for all Android platforms like ARM or x86, so this is not a practical limitation compared to a Java implementation. The decision to base ECDH-Curve25519-Mobile on NaCl was not so much the performance you can gain from a native implementation (as discussed below, using avrnacl leaves some room for performance improvements), but using an implementation from crypto experts who actually work together with Daniel J. Bernstein, the inventor of Curve 25519.  
 
@@ -88,6 +88,6 @@ Having said this, AVRNaCl is targeting 8 bit platforms, and it might not be as o
 
 # License
 
-Similar to the core NaCl code used by ECDH-Curve25519-Mobile, also ECDH-Curve25519-Android is dedicated to the public domain. 
+Similar to the core NaCl code used by ECDH-Curve25519-Mobile, also ECDH-Curve25519-Android is dedicated to the public domain.
 
-For further information, please have a look at the included file COPYING.txt.
+For further information, please have a look at the included file COPYING.
