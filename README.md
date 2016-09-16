@@ -20,16 +20,18 @@ In order to use the native library, follow these steps (tested with Android Stud
 
 4. In your main activity, load the native library by adding the following static block to the main activity class:
 
-    static {
-        // Load native library ECDH-Curve25519-Mobile implementing Diffie-Hellman key
-        // exchange with elliptic curve 25519.
-        try {
-            System.loadLibrary("ecdhcurve25519");
-            Log.i(TAG, "Loaded ecdhcurve25519 library.");
-        } catch (UnsatisfiedLinkError e) {
-            Log.e(TAG, "Error loading ecdhcurve25519 library: " + e.getMessage());
-        }
+```
+static {
+    // Load native library ECDH-Curve25519-Mobile implementing Diffie-Hellman key
+    // exchange with elliptic curve 25519.
+    try {
+        System.loadLibrary("ecdhcurve25519");
+        Log.i(TAG, "Loaded ecdhcurve25519 library.");
+    } catch (UnsatisfiedLinkError e) {
+        Log.e(TAG, "Error loading ecdhcurve25519 library: " + e.getMessage());
     }
+}
+```
 
 Now you can call the library by calling the public methods from class '''de.frank_durr.ecdh_curve25519.ECDHCurve25519'''. The following simple example should give a good idea on how to use the library for Diffie-Hellman key exchange:
 
@@ -59,7 +61,7 @@ A complete Android Studio project is included in folder `test`.
 
 Two steps are required to compile ECDH-Curve25519-Mobile: compiling the native library and compiling the Java class calling the native library.
 
-In order to comile the native libarry, you need to install the Android [NDK](https://developer.android.com/ndk/index.html) first. 
+In order to comile the native libary, you need to install the Android [NDK](https://developer.android.com/ndk/index.html) first. 
 
 Then, go to folder `src/jni` and type the following command (note that in order for the NDK to work, all sources must be in a folder named `jni`):
 
