@@ -1,0 +1,5 @@
+package de.frank_durr.ecdh_curve25519;
+
+class ECDHCurve25519 {
+     public native String foo();
+}
